@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{report}
+
+% paquetes importantes 
+\usepackage[spanish]{babel}
+\usepackage{anteproyectoTesis}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[document]{ragged2e}
+\setmainfont{Arial}
+\usepackage[left=3cm,right=3cm,top=1.5cm,bottom=2.5cm]{geometry}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{anyfontsize}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{lipsum} 
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{xstring,xifthen}
+\setsansfont{ArialNarrow}[
+    Path= ../RECURSOS/ArialNarrow/,
+    Scale=0.9,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+
+ \setmainfont{ArialNarrow}[
+    Path= ../RECURSOS/ArialNarrow/,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+\Carrera{SOFTWARE}
+\input{01-ANTEPROYECTO/ENCABEZADO/encabezado}
+\input{01-ANTEPROYECTO/0.0-DATOS-GENERALES/informacion}
+\newpage
+\input{01-ANTEPROYECTO/ENCABEZADO/encabezado02}
+\tablaPlanProyecto
+\end{document}

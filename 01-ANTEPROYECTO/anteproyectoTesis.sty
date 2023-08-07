@@ -1,0 +1,254 @@
+
+\RequirePackage[document]{ragged2e}
+\ProvidesPackage{anteproyectoTesis}[2014/08/24 Example LaTeX package]
+
+
+\DeclareOption*{\PackageWarning{anteproyectoTesis}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+
+
+% comandos para ingreso de información
+
+\newcommand{\Carrera}[1]{
+\def\carrera{#1}
+}
+\newcommand{\Tema}[1]{
+\def\tema{#1}
+}
+
+\newcommand{\Area}[1]{
+\def\area{#1}
+}
+
+\newcommand{\Entidad}[1]{
+\def\entidad{#1}
+}
+
+\newcommand{\Director}[1]{
+\def\director{#1}
+}
+
+\newcommand{\Autor}[1]{
+\def\autor{#1}
+}
+\newcommand{\primerEncabezado}[1]{
+\def\primerencabezado{#1}
+}
+\newcommand{\descripcion}{PLAN DEL ANTEPROYECTO DE TRABAJO DE INTEGRACIÓN CURRICULAR}
+\newcommand{\Direccion}[1]{
+\def\direccion{#1}
+}
+
+\newcommand{\Telefono}[1]{
+\def\telefono{#1}
+}
+
+\newcommand{\Correo}[1]{
+\def\correo{#1}
+}
+
+\newcommand{\LugarTrabajo}[1]{
+\def\lugarTrabajo{#1}
+}
+
+\newcommand{\TelefonoTrabajo}[1]{
+\def\telefonoTrabajo{#1}
+}
+
+\newcommand{\DireccionTrabajo}[1]{
+\def\direccionTrabajo{#1}
+}
+
+\newcommand{\Duracion}[1]{
+\def\duracion{#1}
+}
+
+\newcommand{\Investigacion}[1]{
+\def\investigacion{#1}
+}
+
+\newcommand{\Presupuesto}[1]{
+\def\presupuesto{#1}
+}
+
+% comando para definir el encabezado
+\newcommand{\encabezado}[1]{
+\thispagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{ \hspace{-22mm} \vspace{-10mm} \includegraphics{RECURSOS/Imagenes/escudo.jpg}}
+\fancyhead[C]{
+ \centering
+{ \fontsize{22}{26.4}\selectfont {\textbf{\sffamily UNIVERSIDAD TÉCNICA DEL NORTE} }}  \\
+{\fontsize{12}{14.4}\selectfont {\sffamily Acreditada Resolución Nro. 173-SE-33-CACES-2020  }}  \\
+{\fontsize{14}{16.8}\selectfont {\sffamily FACULTAD DE INGENIERÍA EN CIENCIAS APLICADAS } }  
+}
+
+\fancyhead[R]{\includegraphics{RECURSOS/Imagenes/logoutn.png} \vspace{-10mm} \hspace{-60pt}}
+\vspace*{40pt}
+\centering
+{\fontsize{12}{14.4}\selectfont {\textbf{\sffamily CARRERA DE #1 } }}  \\
+{\fontsize{12}{14.4}\selectfont {\textbf{\sffamily ANTEPROYECTO DE TRABAJO DE INTEGRACIÓN CURRICULAR } }}  \\
+
+\vspace{5mm}
+\begin{flushleft}
+\large \textbf{DATOS GENERALES}
+\end{flushleft}
+}
+
+% tabla con la información personal
+\newcommand{\tablaInformacionPersonal}{
+
+\begin{center}
+
+\begin{longtable}[c]{|m{0.5\linewidth}|m{0.5\linewidth}|}
+
+    \endhead
+     \multicolumn{2}{p{1\linewidth}}{{}} \\
+    \endfoot
+    \hline
+    \multicolumn{2}{|p{1\linewidth}|}{1.	TEMA:   \tema
+    
+    }\\
+    \hline
+   \multicolumn{2}{|p{1\linewidth}|}{2.	ÁREA / LÍNEA DE INVESTIGACIÓN: 
+   \newline
+   \area
+   }\\
+    \hline
+    \multicolumn{2}{|p{1\linewidth}|}{3.	ENTIDAD QUE AUSPICIA: 
+    \newline
+   \entidad}\\
+    \hline
+   \multicolumn{2}{|p{1\linewidth}|}{4.	DIRECTOR DE TRABAJO DE TITULACIÓN: 
+   \newline
+   \director}\\
+    \hline
+     \multicolumn{2}{|p{1\linewidth}|}{5.	PERTINENCIA DEL PROYECTO: 
+      \newline
+   \director}\\
+    \hline
+  \multicolumn{2}{|p{1\linewidth}|}{
+6.	AUTOR: \autor 
+\newline
+\hspace{3mm} DIRECCIÓN: \direccion
+\newline
+\hspace{3mm} TELÉFONO: \telefono
+\newline
+\hspace{3mm} CORREO ELECTRÓNICO: \correo
+\newline
+\hspace{3mm} LUGAR DE TRABAJO:  \lugarTrabajo
+\newline
+\hspace{3mm} TELÉFONO TRABAJO: \telefonoTrabajo 
+\newline
+\hspace{3mm} DIRECCIÓN DE TRABAJO: \direccionTrabajo
+\
+} \\
+\hline
+\multicolumn{2}{|p{1\linewidth}|}{
+7.	DURACIÓN (Estimado): \duracion } \\
+\hline
+\multicolumn{2}{|p{1\linewidth}|}{
+8.	INVESTIGACIÓN: \investigacion
+} \\
+\hline
+\multicolumn{2}{|p{1\linewidth}|}{
+9.	PRESUPUESTO (Estimado): \$ \presupuesto
+} \\
+\hline
+\multicolumn{2}{|c|}{
+\cellcolor[HTML]{EFEFEF} PARA USO DEL CONSEJO ACADÉMICO
+} \\
+\hline
+  \cellcolor[HTML]{EFEFEF}     FECHA DE ENTREGA:   &   \cellcolor[HTML]{EFEFEF}FECHA DE REVISIÓN:        \\
+\hline
+     \cellcolor[HTML]{EFEFEF}  APROBADO: SI (  )    NO (  )   &  \cellcolor[HTML]{EFEFEF} FECHA DE APROBACIÓN:      \\
+\hline
+\multicolumn{2}{|l|}{
+\cellcolor[HTML]{EFEFEF} OBSERVACIONES
+} \\
+\hline
+\multicolumn{2}{|l|}{
+\cellcolor[HTML]{EFEFEF}
+} \\
+\hline
+   \cellcolor[HTML]{EFEFEF} \textbf{Propuesto por:}       &   \cellcolor[HTML]{EFEFEF} \textbf{ Áreas Técnicas del Tema}     \\
+   \hline
+   \cellcolor[HTML]{EFEFEF}  Persona que propusó el tema  &   
+ \cellcolor[HTML]{EFEFEF} \begin{itemize}
+                              \item Area N° 01
+                             \item Area N° 02
+                             \end{itemize}   \\
+\hline
+   \cellcolor[HTML]{EFEFEF} \textbf{Director sugerido:}    &  \cellcolor[HTML]{EFEFEF} \textbf{Fecha:  }   \\
+\hline
+    \end{longtable}
+\end{center}
+
+}
+
+% plan de proyecto
+\newcommand{\tablaPlanProyecto}{
+\vspace{10mm}
+\begin{center}
+
+\begin{longtable}[c]{|m{0.5\linewidth}|m{0.5\linewidth}|}
+
+    \endhead
+     \multicolumn{2}{p{1\linewidth}}{{}} \\
+    \endfoot
+    \hline
+    \multicolumn{2}{|p{1\linewidth}|}{\textbf{1.	Tema}
+    \newline
+    \tema
+    
+    }\\
+    \hline
+   \multicolumn{2}{|p{1\linewidth}|}{\textbf{2.	Planteamiento del Problema}
+    \newline
+    \input{01-ANTEPROYECTO/0.1-PROBLEMA/problema}
+    \newline
+    }\\
+    \hline
+    \multicolumn{2}{|p{1\linewidth}|}{
+    \textbf{3.	Objetivos }
+      \newline
+    \input{01-ANTEPROYECTO/0.2-OBJETIVOS/objetivo}
+    \newline
+    }\\
+    \hline
+   \multicolumn{2}{|p{1\linewidth}|}{
+   \textbf{4.	Alcance }
+   \newline
+   \lipsum[1-2]
+   }\\
+    \hline
+     \multicolumn{2}{|p{1\linewidth}|}{
+     \textbf{5.	Metodología}}\\
+    \hline
+  \multicolumn{2}{|p{1\linewidth}|}{
+\textbf{6.	Justificación }
+} \\
+\hline
+\multicolumn{2}{|p{1\linewidth}|}{
+\textbf{7.	Contexto} } \\
+\hline
+\multicolumn{2}{|p{1\linewidth}|}{
+\textbf{8.	Contenidos }
+} \\
+\hline
+\multicolumn{2}{|p{1\linewidth}|}{
+\textbf{9.	Cronograma de Actividades}
+} \\
+\hline
+\multicolumn{2}{|p{1\linewidth}|}{
+\textbf{10.	Presupuesto}
+} \\
+\hline
+\multicolumn{2}{|p{1\linewidth}|}{
+\textbf{11.	Bibliografía.}
+} \\
+\hline
+
+\end{longtable}
+\end{center}
+}

@@ -1,0 +1,36 @@
+% Ek siguiente paquete permite colocar etiquetas
+% de informacion para que los usuarios sepan
+% que deben ingresar en cada campo
+
+\RequirePackage[document]{ragged2e}
+\RequirePackage{color}
+\RequirePackage{soul}
+\ProvidesPackage{anteproyectoIndicaciones}[2023/07/08]
+
+
+\DeclareOption*{\PackageWarning{anteproyectoIndicaciones}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+
+
+
+% comandos para ingreso de información
+
+\newcommand{\msgTema}{
+ \hl{[Escriba la idea general del proyecto de fin de grado]}
+}
+
+\newcommand{\msgLineaInvestigacion}{
+ \hl{[Escriba la línea identificada para su TT]}
+}
+
+\newcommand{\msgSublineaInvestigacion}{
+ \hl{[Escriba la sublínea identificada para su TT]}
+}
+
+\newcommand{\msgEntidadAuspiciante}{
+ \hl{[Escriba que institución auspiciara el proyecto TT, evidenciar mediante una carta el auspicio del proyecto o una carta de aval por parte del director de tesis]}
+}
+
+\newcommand{\msgEntidadAuspiciante}{
+ \hl{[Escriba que institución auspiciara el proyecto TT, evidenciar mediante una carta el auspicio del proyecto o una carta de aval por parte del director de tesis]}
+}
